@@ -29,7 +29,6 @@
   width: 100%;
   object-fit: cover;
   transition: transform var(--animation-duration) var(--timing-function);
-  list-style: none;
 }
 
 .gallery__link {
@@ -40,7 +39,4 @@
 
 .gallery__link:hover {
   cursor: zoom-in;
-}
-ul {
-  list-style: none;
 }
