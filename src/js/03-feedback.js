@@ -18,7 +18,7 @@ ref.formRef.addEventListener('input', throttle(validateForm, 500));
 function validateForm(e) {
   const { name, value } = e.target;
   dataBase[name] = value;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(dataBase));
+  localStorage.setItem('feedback-form-state', JSON.stringify(dataBase));
 }
 
 function submitForm(e) {
