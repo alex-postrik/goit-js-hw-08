@@ -6,7 +6,7 @@ const formRef = document.querySelector('.feedback-form');
 formRef.addEventListener('submit', onFormSubmit);
 formRef.addEventListener('input', throttle(validateForm, 500));
 
-const STORAGE_KEY = localStorage.getItem('feedback-form-state');
+const STORAGE_KEY = 'feedback-form-state';
 
 populateText();
 
@@ -17,7 +17,7 @@ function onFormSubmit(event) {
   const finalData = {};
   for (const [key, value] of formData.entries()) {
     if (!value) {
-      alert('Всі поля повинні бути заповнені!!');
+      alert('❌ Всі поля повинні бути заповнені!!');
       return;
     }
     finalData[key] = value;
