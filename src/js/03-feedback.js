@@ -1,15 +1,12 @@
 import throttle from 'lodash.throttle';
 
-
+const STORAGE_KEY = 'feedback-form-state';
 const formRef = document.querySelector('.feedback-form');
 
 formRef.addEventListener('submit', onFormSubmit);
 formRef.addEventListener('input', throttle(validateForm, 500));
+
 populateText();
-
-const STORAGE_KEY = 'feedback-form-state';
-
-
 function onFormSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
